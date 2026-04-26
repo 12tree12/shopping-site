@@ -46,7 +46,7 @@ a {
   letter-spacing: 1px;
 }
 
-.header .items {
+.header .items-holder {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -54,15 +54,17 @@ a {
   gap: 30px;
   padding: 30px 20px;
   background-color: var(--secondary-color);
-}
 
+}
 .header .item {
   display: flex;
   flex-direction: column;
   gap: 10px;
   align-items: center;
-  transition: transform 0.3s ease;
+   transition: transform 0.3s ease;
 }
+
+
 
 .header .item:hover {
   transform: translateY(-5px); /* Smooth floating effect on hover */
@@ -71,7 +73,8 @@ a {
 .header .item img {
   height: 75px;
   border-radius: 8px; /* Softens the image edges */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);  
+  cursor: pointer; 
 }
 
 .header .item a {
