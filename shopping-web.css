@@ -1,0 +1,209 @@
+/* -------------------------------------------------------------- */
+/* Base Styles & Variables                                        */
+/* -------------------------------------------------------------- */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
+}
+
+:root {
+  --main-color: #806bdc;
+  --main-color-hover: #6a57bc;
+  --secondary-color: #ffffff;
+  --text-color: #555555;
+  --bg-light: #f4f4f9;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  color: var(--text-color);
+}
+
+a {
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+/* -------------------------------------------------------------- */
+/* Header Part                                                    */
+/* -------------------------------------------------------------- */
+.header .logo {
+  background-color: var(--main-color);
+  display: flex;
+  height: 90px;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.header .logo a {
+  font-size: 28px;
+  color: var(--secondary-color);
+  letter-spacing: 1px;
+}
+
+.header .items {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap; /* Allows items to wrap on smaller screens */
+  gap: 30px;
+  padding: 30px 20px;
+  background-color: var(--secondary-color);
+}
+
+.header .item {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+
+.header .item:hover {
+  transform: translateY(-5px); /* Smooth floating effect on hover */
+}
+
+.header .item img {
+  height: 75px;
+  border-radius: 8px; /* Softens the image edges */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header .item a {
+  font-size: 15px;
+  color: #333;
+}
+
+.header .item a:hover {
+  color: var(--main-color);
+}
+
+/* -------------------------------------------------------------- */
+/* Middle Part (Banner & Table)                                   */
+/* -------------------------------------------------------------- */
+.middle-part {
+  background-color: var(--bg-light);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 40px 20px;
+  align-items: center;
+}
+
+.middle-part h1 {
+  text-align: center;
+  color: #333;
+  margin-top: 10px;
+}
+
+.middle-part .image-banner {
+  width: 100%;
+  max-width: 1000px; /* Prevents banner from stretching too far */
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.middle-part .image-banner img {
+  width: 100%;
+  display: block;
+}
+
+.table-wrapper {
+  width: 100%;
+  max-width: 900px;
+  overflow-x: auto; /* Adds a scrollbar on mobile if the table is too wide */
+}
+
+.middle-part table {
+  border-collapse: collapse;
+  width: 100%;
+  background-color: var(--secondary-color);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.middle-part table tr td,
+.middle-part table tr th {
+  border: 1px solid #ddd;
+  padding: 12px 15px;
+  text-align: left;
+}
+
+.middle-part table tr th {
+  background-color: var(--main-color);
+  color: var(--secondary-color);
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+.middle-part table tr:nth-child(even) {
+  background-color: #fafafa; /* Subtle zebra striping */
+}
+
+.middle-part table tr td span {
+  text-decoration: line-through;
+  color: #a0a0a0;
+  margin-right: 5px;
+}
+
+/* -------------------------------------------------------------- */
+/* Shop Info                                                      */
+/* -------------------------------------------------------------- */
+.shop-info {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.shop-info h2,
+.shop-info h3 {
+  color: #333;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+.shop-info p {
+  color: var(--text-color);
+  font-size: 15px;
+  line-height: 1.6; /* Improves readability */
+}
+
+.shop-info ul {
+  list-style-position: inside;
+  color: var(--text-color);
+  font-size: 15px;
+  padding: 0;
+  margin: 10px 0;
+  line-height: 1.8;
+}
+
+.shop-info ul li::marker {
+  color: var(--main-color);
+}
+
+/* -------------------------------------------------------------- */
+/* Footer Part                                                    */
+/* -------------------------------------------------------------- */
+.end-header {
+  background-color: #1a1a1a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+  margin-top: 40px;
+}
+
+.end-header h2 {
+  color: #aaaaaa;
+  font-size: 16px;
+  font-weight: normal;
+  text-align: center;
+}
